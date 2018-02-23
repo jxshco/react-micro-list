@@ -2,18 +2,18 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
 class ReactMicroList extends Component {
-  renderItem = (item) => this.props.render(item)
   render () {
-    const { data, render, ...rest } = this.props
-    return (<div {...rest}>
-      {data.map(this.renderItem)}
-    </div>)
+    const { data, render, noResults, ...rest } = this.props
+    return data.length ? <div {...rest}>
+      {data.map(this.props.render)}
+    </div> : noResults
   }
 }
 
-ReactList.propTypes = {
+ReactMicroList.propTypes = {
   render: PropTypes.func.isRequired,
-  data: PropTypes.array.isRequired
+  data: PropTypes.array.isRequired,
+  noResults: PropTypes.node
 }
 
 export default ReactMicroList
