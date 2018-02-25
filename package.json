@@ -18,6 +18,7 @@
     "es6"
   ],
   "dependencies": {
+    "react": "16.2.0",
     "webpack": "^4.0.0"
   },
   "author": "Josh Sturrock <hello@jxsh.co>",
