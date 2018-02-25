@@ -10,12 +10,10 @@ module.exports = {
     rules: [
       {
         test: /\.js$/,
-        exclude: /(node_modules|bower_components|build)/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['react', 'es2015']
-          }
+        loader: 'babel-loader',
+        exclude: [/node_modules/],
+        options: {
+          presets: ['react', 'es2015']
         }
       }
     ]
