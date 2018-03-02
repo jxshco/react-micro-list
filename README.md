@@ -14,7 +14,28 @@ yarn add react-micro-list
 
 ## Usage
 
-*Coming Soon*
+Import the List Component into your project
+
+```js
+import List from 'react-micro-list'
+```
+
+Add the list Component with data and your render item
+```jsx
+<List
+    data={['Josh', 'Bill', 'Sarah']}
+    render={(item) => <p>{item}</p>}
+/>
+```
+
+Add a No Results Component if you would like
+```jsx
+<List
+    data={['Josh', 'Bill', 'Sarah']}
+    render={(item) => <p>{item}</p>}
+    noResults={<p>You Have No Results</p>}
+/>
+```
 
 ## Style
 
