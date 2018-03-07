@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 
 class ReactMicroList extends Component {
   render () {
-    const { data, render, noResults } = this.props
-    return data.length ? <div>
+    const { data, render, noResults, ...rest } = this.props
+    return data.length ? <div {...rest}>
       {data.map(this.props.render)}
     </div> : noResults ? noResults : null
   }
