@@ -37,6 +37,16 @@ Add a No Results Component if you would like
 />
 ```
 
+Add a Loading Component if you would need to render something while waiting
+```jsx
+<List
+    data={['Josh', 'Bill', 'Sarah']}
+    render={(item) => <p>{item}</p>}
+    loading={true|false}
+    loadingComponent={<p>Loading...</p>}
+/>
+```
+
 ## Style
 
 [![js-standard-style](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)
