@@ -1,23 +1,18 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+//@flow
+import * as React from 'react'
 
-class ReactMicroList extends Component {
-  render () {
+export default class ReactMicroList extends React.Component<{
+  render: any => React.Node,
+  data: Array<any>,
+  loading: boolean,
+  loadingComponent: React.Node,
+  noResults: React.Node
+}> {
+  render() {
     const { data, render, noResults, loading, loadingComponent, ...rest } = this.props
     if (loading) {
       return loadingComponent
     }
-    return data.length ? <div {...rest}>
-      {data.map(this.props.render)}
-    </div> : noResults ? noResults : null
+    return data.length ? <div {...rest}>{data.map(render)}</div> : noResults ? noResults : null
   }
 }
-
-ReactMicroList.propTypes = {
-  render: PropTypes.func.isRequired,
-  data: PropTypes.array.isRequired,
-  loading: PropTypes.bool,
-  noResults: PropTypes.node
-}
-
-export default ReactMicroList
