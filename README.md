@@ -3,7 +3,9 @@
 #### A Tiny Package to render your results.
 
 ## Install
+
 Add React Micro List to your Project
+
 ```bash
 npm install react-micro-list --save
 
@@ -21,35 +23,27 @@ import List from 'react-micro-list'
 ```
 
 Add the list Component with data and your render item
+
 ```jsx
-<List
-    data={['Josh', 'Bill', 'Sarah']}
-    render={(item) => <p>{item}</p>}
-/>
+<List data={['Josh', 'Bill', 'Sarah']} render={item => <p>{item}</p>} />
 ```
 
 Add a No Results Component if you would like
+
 ```jsx
-<List
-    data={['Josh', 'Bill', 'Sarah']}
-    render={(item) => <p>{item}</p>}
-    noResults={<p>You Have No Results</p>}
-/>
+<List data={['Josh', 'Bill', 'Sarah']} render={item => <p>{item}</p>} noResults={<p>You Have No Results</p>} />
 ```
 
 Add a Loading Component if you would need to render something while waiting
+
 ```jsx
 <List
-    data={['Josh', 'Bill', 'Sarah']}
-    render={(item) => <p>{item}</p>}
-    loading={true|false}
-    loadingComponent={<p>Loading...</p>}
+  data={['Josh', 'Bill', 'Sarah']}
+  render={item => <p>{item}</p>}
+  loading={true | false}
+  loadingComponent={<p>Loading...</p>}
 />
 ```
-
-## Style
-
-[![js-standard-style](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)
 
 ## License
 
