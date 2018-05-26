@@ -12,12 +12,7 @@
     "type": "git",
     "url": "git+https://github.com/jxshco/react-micro-list.git"
   },
-  "keywords": [
-    "list",
-    "results",
-    "react",
-    "es6"
-  ],
+  "keywords": ["list", "results", "react", "es6"],
   "author": "Josh Sturrock <hello@jxsh.co>",
   "bugs": {
     "url": "https://github.com/jxshco/react-micro-list/issues"
@@ -37,8 +32,8 @@
     "webpack": "^4.0.0"
   },
   "peerDependencies": {
-    "react": "16.2.0",
-    "react-dom": "16.2.0"
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
   },
   "license": "MIT"
 }
