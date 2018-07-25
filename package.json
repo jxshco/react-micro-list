@@ -7,20 +7,16 @@
     "start": "webpack --watch --mode development",
     "lint": "eslint src",
     "prepublish": "npm run build",
-    "flow-coverage": "flow-coverage-report -i 'src/**/*.js' -i 'src/**/*.jsx' -x 'src/test/**' --threshold 90",
+    "flow-coverage":
+      "flow-coverage-report -i 'src/**/*.js' -i 'src/**/*.jsx' -x 'src/test/**' --threshold 90",
     "build": "BABEL_ENV=cjs babel src/ -d lib/"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jxshco/react-micro-list.git"
   },
-  "keywords": [
-    "list",
-    "results",
-    "react",
-    "es6"
-  ],
-  "author": "Josh Sturrock <hello@jxsh.co>",
+  "keywords": ["list", "results", "react", "es6"],
+  "author": "Josh Sturrock <jxshco@gmail.com>",
   "bugs": {
     "url": "https://github.com/jxshco/react-micro-list/issues"
   },
